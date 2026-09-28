@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Weekend_Check_Project": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:55858;http://localhost:55859"
+    }
+  }
+}

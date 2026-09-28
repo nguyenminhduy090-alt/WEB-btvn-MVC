@@ -1,0 +1,47 @@
+@page
+@using ProductManagement_Razor_Project.Models
+
+@{
+    ViewData["Title"] = "Danh sách sản phẩm";
+
+    List<Product> products = new List<Product>()
+    {
+        new Product
+        {
+            Id = 1,
+            Name = "Laptop Dell",
+            Price = 15000000
+        },
+        new Product
+        {
+            Id = 2,
+            Name = "Điện thoại Samsung",
+            Price = 8000000
+        },
+        new Product
+        {
+            Id = 3,
+            Name = "Tai nghe Bluetooth",
+            Price = 500000
+        }
+    };
+}
+
+<h2>Danh sách sản phẩm</h2>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>ID</th>
+        <th>Tên sản phẩm</th>
+        <th>Giá</th>
+    </tr>
+
+    @foreach (var product in products)
+    {
+        <tr>
+            <td>@product.Id</td>
+            <td>@product.Name</td>
+            <td>@product.Price.ToString("N0") VNĐ</td>
+        </tr>
+    }
+</table>
